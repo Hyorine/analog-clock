@@ -1,0 +1,83 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: black; /* Fekete háttér */
+}
+
+.clock {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0 0 40px 10px var(--neon-green);  /* Neon zöld világítás */
+    background: radial-gradient(circle, lightgreen,green); /* Fokozatos színátmenet */
+}
+
+.clock-face {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.number {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 30px; /* Középre igazítja a számokat függőlegesen */
+    left: calc(50% - 15px); /* Középre igazítja vízszintesen */
+    top: calc(50% - 15px); /* Középre igazítja függőlegesen */
+}
+
+.number:nth-child(1)  { transform: rotate(0deg) translateY(-130px); }
+.number:nth-child(2)  { transform: rotate(30deg) translateY(-130px); }
+.number:nth-child(3)  { transform: rotate(60deg) translateY(-130px); }
+.number:nth-child(4)  { transform: rotate(90deg) translateY(-130px); }
+.number:nth-child(5)  { transform: rotate(120deg) translateY(-130px); }
+.number:nth-child(6)  { transform: rotate(150deg) translateY(-130px); }
+.number:nth-child(7)  { transform: rotate(180deg) translateY(-130px); }
+.number:nth-child(8)  { transform: rotate(210deg) translateY(-130px); }
+.number:nth-child(9)  { transform: rotate(240deg) translateY(-130px); }
+.number:nth-child(10) { transform: rotate(270deg) translateY(-130px); }
+.number:nth-child(11) { transform: rotate(300deg) translateY(-130px); }
+.number:nth-child(12) { transform: rotate(330deg) translateY(-130px); }
+
+.hour-hand,
+.minute-hand,
+.second-hand {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom center;
+}
+
+.hour-hand {
+    width: 6px;
+    height: 80px;
+    background: black;
+    transform: rotate(90deg);
+}
+
+.minute-hand {
+    width: 4px;
+    height: 100px;
+    background: grey;
+    transform: rotate(180deg);
+}
+
+.second-hand {
+    width: 2px;
+    height: 120px;
+    background: red;
+    transform: rotate(270deg);
+}
+
+/* Neon szín */
+:root {
+    --neon-green: #39ff14; /* Neon zöld szín */
+}
